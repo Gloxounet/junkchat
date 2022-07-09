@@ -1,14 +1,17 @@
 import './App.css';
-import { Link } from 'react-router-dom';
+import ButtonArrow from './components/ButtonArrow.js'
 
 function App() {
   return (
     <div className="App">
       <h1>
-        Welcome to <span>JunkChat</span>
+        Welcome to <span className="aqua">JunkChat</span>
       </h1>
+      <h2>
+        (basically it’s just a live chat.)
+      </h2>
 
-      <Link to="/pseudo">Get Started</Link>
+      <ButtonArrow link_uri={'/pseudo'} text={'Start Now'} />
 
     </div>
   );
