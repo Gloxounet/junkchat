@@ -7,7 +7,10 @@
     gap: 15px;
 
     border-radius: 8px;
-    background-color:var(--pink)
+    background-color:var(--pink);
+
+    width: 279px;
+    height: 69px;
 }
 
 .element{

@@ -1,20 +1,30 @@
 import ButtonArrow from "../components/ButtonArrow";
+import InputBar from "../components/InputBar";
+
+import { useState } from "react";
 
 export default function PagePseudo() {
-    return (
-      <main>
+  const [username, setUsername] = useState('Joe Biden');
+
+
+  return (
+    <div className="flex-column" style={{gap:'96px',marginTop:'14vh'}}>
+      <div className="flex-column" style={{gap:'14px'}}>
         <h1>
-          enter your <span>name</span>
+          enter your <span className='lime'>name</span>
         </h1>
-        <h2>
-          (you will join as <span>Joe Biden</span>)
-        </h2>
+        {
+          username?
+          (<h2>(you will join as <span className='pink'>{username}</span>)</h2>):
+          (<h2>it can be anything you want.</h2>)
+        }
+      </div>
 
-        <div>
+      <div className="flex-row flex-wrap-wrap align-item-flex-end" style={{gap:'14px'}}>
+        <InputBar inputHandler={setUsername}/>
+        <ButtonArrow link_uri={'/chat'} text='Join chat' backgroundColor={'var(--lime)'}/>
+      </div>
 
-          <ButtonArrow link_uri={'/chat'} text='Join chat'/>
-        </div>
-
-      </main>
-    );
+    </div>
+  );
 }
