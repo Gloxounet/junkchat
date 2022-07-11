@@ -63,3 +63,9 @@ input:focus {
 .none{
     display:none
 }
+
+@media (min-device-width:320px) and (max-device-width:768px) {
+    .smallInput {
+        width: 70vw;
+    }
+}

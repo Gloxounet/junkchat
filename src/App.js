@@ -13,7 +13,7 @@ function App() {
       </div>
 
         
-      <ButtonArrow link_uri={'/pseudo'} text={'Start Now'} />
+      <ButtonArrow link_uri={'/chat'} text={'Start Now'} />
 
     </div>
   );

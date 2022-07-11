@@ -2,8 +2,7 @@
     padding: 0px 8px;
 
     width: auto;
-    height: 80vh;
-    max-height: 80vh;
+    height: 76vh;
 
     display: flex;
     flex-direction: column-reverse;
@@ -36,4 +35,10 @@
 
 .messageUser{
     font-weight: 500;
+}
+
+@media (min-device-width:320px) and (max-device-width:768px) {
+    .wrapper{
+        height: 70vh;
+    }
 }

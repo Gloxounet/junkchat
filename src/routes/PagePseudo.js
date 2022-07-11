@@ -3,9 +3,19 @@ import InputBar from "../components/InputBar";
 
 import { useState } from "react";
 
-export default function PagePseudo() {
+function get_random (list) {
+  return list[Math.floor((Math.random()*list.length))];
+}
+
+export default function PagePseudo({setUser}) {
   const [username, setUsername] = useState('Joe Biden');
 
+  const handleClick = function(){
+    setUser({
+      username:username,
+      color:get_random(['var(--pink)','var(--aqua)','var(--lime)','var(--black)'])
+    })
+  }
 
   return (
     <div className="flex-column" style={{gap:'96px',marginTop:'14vh'}}>
@@ -22,7 +32,7 @@ export default function PagePseudo() {
 
       <div className="flex-row flex-wrap-wrap align-item-flex-end" style={{gap:'14px'}}>
         <InputBar inputHandler={setUsername} placeholder={username}/>
-        <ButtonArrow link_uri={'/chat'} text='Join chat' backgroundColor={'var(--lime)'}/>
+        <ButtonArrow onClick={handleClick} link_uri={'/chat'} text='Join chat' backgroundColor={'var(--lime)'}/>
       </div>
 
     </div>
