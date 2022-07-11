@@ -1,10 +1,17 @@
-import './InputBar.css';
+import styles from './InputBar.module.css';
 
-export default function InputBar({inputHandler}) {
+export default function InputBar({inputHandler,small=true,placeholder='',maxlength=22,handleEnterKeyDown=(e)=>{}}) {
     return (
-        <div className='wrapper'>
-            <span className='small-text grey'>name</span>
-            <input maxlength={22} placeholder={'Joe Biden'} className='small-input small-text-input' onChange={e => inputHandler(e.target.value)} />
+        <div className={styles.wrapper}>
+            <span className={small?styles.smallText+' grey':styles.none}>name</span>
+            <input
+                type="text"
+                maxLength={maxlength}
+                placeholder={placeholder}
+                className={small?styles.smallInput +' '+ styles.smallTextInput:styles.largeInput +' '+ styles.largeTextInput}
+                onChange={e => inputHandler(e.target.value)}
+                onKeyDown={(e)=>{e.key==='Enter'?handleEnterKeyDown(e):((e)=>{})(e)}}
+            />
         </div>
     );
 }

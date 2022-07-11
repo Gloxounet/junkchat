@@ -1,0 +1,39 @@
+.wrapper{
+    padding: 0px 8px;
+
+    width: auto;
+    height: 80vh;
+    max-height: 80vh;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.messageWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    width: auto;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.messageUser{
+    font-weight: 500;
+}

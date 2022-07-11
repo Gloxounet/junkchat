@@ -21,7 +21,7 @@ export default function PagePseudo() {
       </div>
 
       <div className="flex-row flex-wrap-wrap align-item-flex-end" style={{gap:'14px'}}>
-        <InputBar inputHandler={setUsername}/>
+        <InputBar inputHandler={setUsername} placeholder={username}/>
         <ButtonArrow link_uri={'/chat'} text='Join chat' backgroundColor={'var(--lime)'}/>
       </div>
 
