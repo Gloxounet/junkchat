@@ -12,7 +12,7 @@ export default function PageChat() {
   const [messages,setMessages] = useState([]);
 
   //API Functions
-  const api_url = process.env["REACT_APP_API"];
+  const api_url = 'http://api.chillpaper.fr/messages'
 
   const getMessages = async function(){
     const res = await fetch(api_url,{method:'GET'})

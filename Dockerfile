@@ -13,4 +13,5 @@ RUN npm ci --only=production
 COPY . ./
 
 # start app
-CMD ["npm", "start"]
+RUN ["npm","run","build"]
+CMD ["npm","run","production"]
